@@ -30,14 +30,15 @@ string GetLettersFromStr(string s)
     string letters = "";
     foreach (char e in s)
     {
-        if(char.IsASCiiLetter(e) == true)
+        if(char.IsAsciiLetter(e) == true)
         {
             letters = letters + e;
         }
-        return letters;
     }
+    return letters;
 }
 
 string str = System.Console.ReadLine();
 string result = GetLettersFromStr(str);
 System.Console.WriteLine(result);
+
