@@ -20,17 +20,17 @@ class UserInputToCompileForTest
     public static int[] SumRows(int[,] array)
     {
         //Напишите свое решение здесь
-        int[] array = new int[numbers.GetLength(0)];
-        for (int i = 0; i < numbers.GetLength(0); i++)
+        int[] array2 = new int[array.GetLength(0)];
+        for (int i = 0; i < array.GetLength(0); i++)
         {
             int sum = 0;
-            for (int j = 0; j < numbers.GetLength(1); j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-                sum = sum + numbers[i, j];
+                sum = sum + array[i, j];
             }
-            array[i] = sum;
+            array2[i] = sum;
         }
-        return array;
+        return array2;
     }
 
     // Получение индекса минимального элемента в одномерном массиве
@@ -38,14 +38,14 @@ class UserInputToCompileForTest
     {
         //Напишите свое решение здесь
         int min = array[0];
-        index = 0;
+        int index = 0;
         for (int i = 1; i < array.Length; i++)
         {
             if (array[i] < min)
             {
                 min = array[i];
+                index = i;
             }
-            index = i;
         }
         return index;
 
@@ -53,7 +53,7 @@ class UserInputToCompileForTest
     public static void PrintResult(int[,] numbers)
     {
         //Напишите свое решение здесь
-        System.Console.WriteLine(MinIndex(array));
+        System.Console.WriteLine(MinIndex(SumRows(numbers)));
     }
 }
 
