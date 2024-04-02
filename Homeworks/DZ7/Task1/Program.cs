@@ -15,7 +15,7 @@ void F(int m, int n)
         else
         {
 
-            F(m + 1, n);
+            F(m, n - 1);
             System.Console.Write(m + " ");
 
         }
